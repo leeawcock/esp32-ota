@@ -7,11 +7,17 @@
 
 #include "freertos/event_groups.h"
 
+#define TASK_STACK_DEPTH 2048
+
+#define SEALEVELPRESSURE_HPA (1013.25)
+#define BME680_I2C_ADDRESS 0x76
+
 /*! Identifier of the log messages produced by the application */
 #define TAG "tb_ota"
 
 /*! Firmware version used for comparison after OTA config was received from ThingsBoard */
-#define FIRMWARE_VERSION "v1.1"
+#define FIRMWARE_VERSION "v1.0"
+#define COUNT_MAX 0
 
 /*! Factory partiton label */
 #define FACTORY_PARTITION_LABEL "factory"
